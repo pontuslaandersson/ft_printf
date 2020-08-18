@@ -118,6 +118,8 @@ void    test_f(void)
 
     ft_printf("(ft_19) Ft_printf with f conversion and precision of 2, 42.563: |%.2f|\n", 42.563);
     ft_printf("(ft_19) Ft_printf with f conversion and precision of 2, 42.565: |%.2f|\n", 42.565);
+	printf("(19) printf control with f conversion and precision of 2, 42.563: |%.2f|\n", 42.563);
+    printf("(19) printf control with f conversion and precision of 2, 42.565: |%.2f|\n", 42.565);
     
     printf("(20a) printf with f conversion of long double and precision of 3: |%.3Lf|\n", ld);
 

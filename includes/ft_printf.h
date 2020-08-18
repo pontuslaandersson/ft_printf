@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:50:53 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 19:50:37 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/18 22:10:17 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,8 @@ int						resolve(t_table *table, const char *format);
 int						parse_args(t_table *table, const char *format);
 void					ft_strrev(char *str, long len);
 double					ft_pow(double n, long pow);
-char					*ftoa(double n, long precision);
+//char					*ftoa(double n, long precision);
+char					*ftoa(long double n, int precision);
 char					*ldtoa(long double n, long precision);
 int						itoa_length(int n);
 int						sresolve(t_table *table, const char *format, char *str, size_t n);
