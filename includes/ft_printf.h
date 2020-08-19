@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:50:53 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:53:34 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:05:57 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ size_t					display_width(long int width);
 size_t					display_zeros(t_table *table, int n);
 size_t					do_conversion(t_table *table, int conv);
 size_t					f_conversion(t_table *table);
+void					free_conversions(t_table *table);
 long int				ft_atol(const char *str, long int start);
 char					*ft_itoa_base_cap(int n, int base);
 double					ft_prep_float(long double n, t_table *table);
@@ -71,6 +72,7 @@ long int				get_width(t_table *table, const char *format, int i);
 size_t					handle_conversion(t_table *table, int conv);
 int						is_conversion(const char *format, int i);
 size_t					jump_i(const char *str, int start);
+void					make_buf(t_table *table, char *buf, char *tmp, size_t n);
 size_t					nul_c_conversion(t_table *table);
 int						resolve(t_table *table, const char *format);
 int						parse_args(t_table *table, const char *format);
@@ -79,7 +81,7 @@ double					ft_pow(double n, long pow);
 char					*ftoa(double n, long precision);
 char					*ldtoa(long double n, long precision);
 int						itoa_length(int n);
-int						sresolve(t_table *table, const char *format, char *str, size_t n);
+int             		sresolve(t_table *table, char *buf, const char *format, size_t size);
 int						ft_snprintf(char *str, size_t n, const char *format, ...);
 long					longtostr(long nb, char *str, long decimals);
 size_t					d_conversion(t_table *table);

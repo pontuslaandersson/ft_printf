@@ -6,13 +6,13 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:45:59 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:38:34 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:15:54 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void				do_f_argument(t_table *table, char *str)
+void				do_f_argument(t_table *table)
 {
 	char	*prefix;
 	char	*suffix;
@@ -69,7 +69,7 @@ size_t				f_double(t_table *table)
 	str = ftoa(n, table->cursor->precision);
 	build_output(table, str);
 	handle_sign(table, str, n, sb);
-	do_f_argument(table, str);
+	do_f_argument(table);
 	free(str);
 	table->cursor->len = ft_strlen(table->cursor->argument);
 	return (ft_strlen(table->cursor->argument));
@@ -87,7 +87,7 @@ size_t				f_long_double(t_table *table)
 	str = ldtoa(n, table->cursor->precision);
 	build_output(table, str);
 	handle_sign(table, str, n, sb);
-	do_f_argument(table, str);
+	do_f_argument(table);
 	free(str);
 	table->cursor->len = ft_strlen(table->cursor->argument);
 	return (ft_strlen(table->cursor->argument));

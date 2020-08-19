@@ -6,13 +6,13 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/07 13:44:54 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 20:55:13 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:17:20 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void			actual_o_conversion(size_t nbr, t_table *table, char *str)
+void			actual_o_conversion(t_table *table)
 {
 	char		*prefix;
 	char		*suffix;
@@ -75,7 +75,7 @@ size_t			o_conversion(t_table *table)
 		free(tmp);
 	}
 	build_output(table, str);
-	actual_o_conversion(n, table, str);
+	actual_o_conversion(table);
 	free(str);
 	table->cursor->len = ft_strlen(table->cursor->argument);
 	return (ft_strlen(table->cursor->argument));

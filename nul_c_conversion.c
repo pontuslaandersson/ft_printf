@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 13:51:39 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:57:33 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 17:01:52 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,10 @@ static char	*append_suffix_to_nul(char *s1)
 	return (ret);
 }
 
-static void	do_null_prefix(t_table *table, char *prefix, char *tmp, size_t len)
+static void	do_null_prefix(t_table *table, char *prefix, size_t len)
 {
+	char	*tmp;
+
 	tmp = join_value(prefix, table->cursor->argument, (ft_strlen(prefix)), 1);
 	len = len + ft_strlen(prefix);
 	free(table->cursor->argument);
@@ -69,14 +71,13 @@ size_t		nul_c_conversion(t_table *table)
 {
 	char		*prefix;
 	char		*suffix;
-	char		*tmp;
 	size_t		len;
 
 	len = 0;
 	prefix = build_prefix(table, "*");
 	if (prefix)
 	{
-		do_null_prefix(table, prefix, tmp, len);
+		do_null_prefix(table, prefix, len);
 	}
 	suffix = build_suffix(table, "*");
 	if (suffix)

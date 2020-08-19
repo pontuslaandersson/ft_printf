@@ -6,18 +6,17 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/07 14:08:09 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/13 19:24:18 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:20:53 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t			actual_actual_s_conversion(t_table *table, char *str)
+size_t			actual_actual_s_conversion(t_table *table)
 {
 	char		*prefix;
 	char		*suffix;
 	char		*tmp;
-	size_t		ret;
 
 	prefix = build_prefix(table, table->cursor->argument);
 	if (prefix)
@@ -47,7 +46,7 @@ size_t			ws_conversion(t_table *table)
 
 	str = va_arg(table->args, char *);
 	build_output(table, str);
-	actual_actual_s_conversion(table, str);
+	ret = actual_actual_s_conversion(table);
 	table->cursor->len = ret;
 	return (ret);
 }
@@ -62,7 +61,7 @@ size_t			actual_s_conversion(t_table *table)
 		table->cursor->argument = ft_strdup("(null)");
 	else
 		build_output(table, str);
-	ret = actual_actual_s_conversion(table, str);
+	ret = actual_actual_s_conversion(table);
 	table->cursor->len = ret;
 	return (ret);
 }

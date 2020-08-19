@@ -6,7 +6,7 @@
 #    By: panderss <panderss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/05 13:50:32 by panderss          #+#    #+#              #
-#    Updated: 2020/08/19 13:52:56 by panderss         ###   ########.fr        #
+#    Updated: 2020/08/19 16:06:20 by panderss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,7 +120,9 @@ SRC_PRINTF = ft_printf.c \
 		d_conversion.c \
 		s_conversion.c \
 		sresolve.c \
-		nul_c_conversion.c
+		nul_c_conversion.c \
+		free_conversions.c \
+		make_buf.c
 
 INCLUDES = ./includes/
 
@@ -232,13 +234,15 @@ OBJ_PRINTF = ft_printf.o \
 		d_conversion.o \
 		s_conversion.o \
 		sresolve.o \
-		nul_c_conversion.o
+		nul_c_conversion.o \
+		free_conversions.o \
+		make_buf.o
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC_LIBFT) -I includes/
-	gcc -c $(SRC_PRINTF) -I includes/
+	gcc -c -Wall -Wextra -Werror $(SRC_LIBFT) -I includes/
+	gcc -c -Wall -Wextra -Werror $(SRC_PRINTF) -I includes/
 	ar rc $(NAME) $(OBJ_LIBFT) $(OBJ_PRINTF)
 	ranlib $(NAME)
 

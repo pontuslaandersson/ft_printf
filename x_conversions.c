@@ -6,16 +6,17 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 17:22:50 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 20:08:49 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:31:18 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	actual_x_conversion(size_t nbr, t_table *table, char *str, char *tmp)
+void	actual_x_conversion(t_table *table)
 {
 	char		*prefix;
 	char		*suffix;
+	char		*tmp;
 
 	prefix = build_prefix(table, table->cursor->argument);
 	if (prefix)
@@ -63,7 +64,6 @@ size_t	x_conversion(t_table *table)
 {
 	ssize_t		n;
 	char		*str;
-	char		*tmp;
 
 	if (table->cursor->l == 1)
 		n = va_arg(table->args, unsigned long int);
@@ -73,7 +73,7 @@ size_t	x_conversion(t_table *table)
 		n = va_arg(table->args, unsigned int);
 	str = pretreat_x(table, n);
 	build_output(table, str);
-	actual_x_conversion(n, table, str, tmp);
+	actual_x_conversion(table);
 	free(str);
 	table->cursor->len = ft_strlen(table->cursor->argument);
 	return (ft_strlen(table->cursor->argument));
@@ -95,7 +95,6 @@ size_t	cap_x_conversion(t_table *table)
 {
 	ssize_t		n;
 	char		*str;
-	char		*tmp;
 
 	if (table->cursor->l == 1)
 		n = va_arg(table->args, unsigned long int);
@@ -105,7 +104,7 @@ size_t	cap_x_conversion(t_table *table)
 		n = va_arg(table->args, unsigned int);
 	str = pretreat_x(table, n);
 	build_output(table, str);
-	actual_x_conversion(n, table, str, tmp);
+	actual_x_conversion(table);
 	ft_make_cap(table->cursor->argument);
 	free(str);
 	table->cursor->len = ft_strlen(table->cursor->argument);

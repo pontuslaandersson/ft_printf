@@ -6,24 +6,11 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:50:05 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 21:30:42 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:02:51 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static void			free_conversions(t_table *table)
-{
-	t_conversion	*conv;
-
-	table->cursor = table->conversions;
-	while (table->cursor != NULL)
-	{
-		conv = table->cursor;
-		table->cursor = table->cursor->next;
-		free(conv);
-	}
-}
 
 void				with_args(t_table *table, const char *format)
 {

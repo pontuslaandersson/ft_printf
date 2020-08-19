@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:44:17 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/11 15:41:30 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:13:53 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char		*build_pre_pointer(t_table *table, char *str)
 	return (prefix);
 }
 
-char		*expand_zeros(t_table *table, int padding)
+char		*expand_zeros(int padding)
 {
 	int		i;
 	char	*str;
@@ -67,7 +67,7 @@ char		*build_prefix(t_table *table, char *str)
 	}
 	else if (table->cursor->zero_pad == 1 &&
 			table->cursor->width > (long)ft_strlen(str))
-		prefix = expand_zeros(table, (int)(table->cursor->width - \
+		prefix = expand_zeros((int)(table->cursor->width - \
 		ft_strlen(str)));
 	else
 		prefix = NULL;

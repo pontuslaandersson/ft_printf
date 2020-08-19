@@ -45,6 +45,10 @@ void    test_returns(void)
 	ret = ft_printf("%s", "Lesenfantsnesententpastrestresbonmaiscac'estparcequ'ilsfontcacadansleurculotteetquecen'estvraimentpastrestrespropreNonmongroscoupdecœurc'étaitunsoir");
 	ft_printf("Return of last ft_printf command (should be 150): %d\n", ret);
     ft_printf("\n");
+	ft_printf("\n");
+	ret = ft_printf("%10o\n", 42);
+	ft_printf("Return of last ft_printf command (should be 11): %d\n", ret);
+    ft_printf("\n");
     /*ft_printf("====THE REAL PRINTF====\n");
     ret = printf("Test.\n");
     printf("Return of last printf command (should be 6): %d\n", ret);

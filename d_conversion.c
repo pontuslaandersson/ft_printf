@@ -6,13 +6,13 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/07 13:53:59 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:30:38 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 16:17:48 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t			actual_d_conversion(size_t nbr, t_table *table, char *str)
+size_t			actual_d_conversion(t_table *table)
 {
 	char				*tmp;
 	char				*prefix;
@@ -90,7 +90,7 @@ size_t			d_conversion(t_table *table)
 	str = prepretreat_str(table, n);
 	build_output(table, str);
 	pretreat_str(table, table->cursor->argument, n);
-	ret = actual_d_conversion(n, table, str);
+	ret = actual_d_conversion(table);
 	table->cursor->len = ret;
 	free(str);
 	table->cursor->len = ft_strlen(table->cursor->argument);
