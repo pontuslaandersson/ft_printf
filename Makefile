@@ -6,7 +6,7 @@
 #    By: panderss <panderss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/05 13:50:32 by panderss          #+#    #+#              #
-#    Updated: 2020/08/19 16:06:20 by panderss         ###   ########.fr        #
+#    Updated: 2020/08/19 17:20:22 by panderss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,41 +88,41 @@ SRC_LIBFT = ./libft/ft_memset.c \
 		./libft/ft_strndup.c \
 		./libft/ft_signbit.c
 
-SRC_PRINTF = ft_printf.c \
-		build_output.c \
-		build_prefix.c \
-		build_suffix.c \
-		check_conversion.c \
-		check_flags.c \
-		create_table.c \
-		do_conversion.c \
-		ft_atol.c \
-		ft_prep_float.c \
-		get_precision.c \
-		handle_conversion.c \
-		is_conversion.c \
-		parse_args.c \
-		resolve.c \
-		jump_i.c \
-		get_width.c \
-		ft_pow.c \
-		ft_putnstr.c \
-		itoa_length.c \
-		ft_strrev.c \
-		longtostr.c \
-		ftoa.c \
-		ldtoa.c \
-		x_conversions.c \
-		p_conversion.c \
-		f_conversion.c \
-		u_conversion.c \
-		o_conversion.c \
-		d_conversion.c \
-		s_conversion.c \
-		sresolve.c \
-		nul_c_conversion.c \
-		free_conversions.c \
-		make_buf.c
+SRC_PRINTF = ./src/ft_printf.c \
+		./src/build_output.c \
+		./src/build_prefix.c \
+		./src/build_suffix.c \
+		./src/check_conversion.c \
+		./src/check_flags.c \
+		./src/create_table.c \
+		./src/do_conversion.c \
+		./src/ft_atol.c \
+		./src/ft_prep_float.c \
+		./src/get_precision.c \
+		./src/handle_conversion.c \
+		./src/is_conversion.c \
+		./src/parse_args.c \
+		./src/resolve.c \
+		./src/jump_i.c \
+		./src/get_width.c \
+		./src/ft_pow.c \
+		./src/ft_putnstr.c \
+		./src/itoa_length.c \
+		./src/ft_strrev.c \
+		./src/longtostr.c \
+		./src/ftoa.c \
+		./src/ldtoa.c \
+		./src/x_conversions.c \
+		./src/p_conversion.c \
+		./src/f_conversion.c \
+		./src/u_conversion.c \
+		./src/o_conversion.c \
+		./src/d_conversion.c \
+		./src/s_conversion.c \
+		./src/sresolve.c \
+		./src/nul_c_conversion.c \
+		./src/free_conversions.c \
+		./src/make_buf.c
 
 INCLUDES = ./includes/
 
