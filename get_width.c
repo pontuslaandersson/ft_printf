@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 15:16:00 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 19:15:55 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:23:15 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,14 @@ int			get_sign(t_table *table, const char *format, int j)
 	return (sign);
 }
 
+long int	set_star_width(t_table *table)
+{
+	long int	ret;
+
+	ret = va_arg(table->args, long int);
+	return (ret);
+}
+
 long int	parse_width(t_table *table, const char *format, int j, int sign)
 {
 	long int	ret;
@@ -32,6 +40,8 @@ long int	parse_width(t_table *table, const char *format, int j, int sign)
 	ret = 0;
 	while (is_conversion(format, j) == 0)
 	{
+		if (format[j] == '*')
+			return (set_star_width(table));
 		if (ft_isdigit(format[j]) == 1)
 		{
 			if (format[j] == '0')

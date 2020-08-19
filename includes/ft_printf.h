@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:50:53 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 22:10:17 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:36:24 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,6 @@ typedef struct			s_table
 	size_t				i;
 }						t_table;
 
-typedef struct s_fbitshift
-{
-	unsigned long long 	m;
-	unsigned short		exp;
-}						t_fbitshift;
-
-
-typedef union	u_fsignbit
-{
-	long double			ld;
-	t_fbitshift			shifter;
-}						t_fsignbit;
-
 void					build_output(t_table *table, char *str);
 char					*build_prefix(t_table *table, char *str);
 char					*build_suffix(t_table *table, char *str);
@@ -89,7 +76,6 @@ int						parse_args(t_table *table, const char *format);
 void					ft_strrev(char *str, long len);
 double					ft_pow(double n, long pow);
 char					*ftoa(double n, long precision);
-//char					*ftoa(long double n, int precision);
 char					*ldtoa(long double n, long precision);
 int						itoa_length(int n);
 int						sresolve(t_table *table, const char *format, char *str, size_t n);

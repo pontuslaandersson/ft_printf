@@ -6,19 +6,11 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:45:59 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 22:20:22 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:38:34 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static int			ft_signbit(long double nb)
-{
-	t_fsignbit			signbit;
-
-	signbit.ld = nb;
-	return (int)(signbit.shifter.exp >> 15);
-}
 
 void				do_f_argument(t_table *table, char *str)
 {

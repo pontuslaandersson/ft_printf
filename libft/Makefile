@@ -6,7 +6,7 @@
 #    By: panderss <panderss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 17:17:19 by panderss          #+#    #+#              #
-#    Updated: 2020/08/18 12:56:09 by panderss         ###   ########.fr        #
+#    Updated: 2020/08/19 13:34:41 by panderss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,8 @@ SRC = ./ft_memset.c \
 	./ft_lstmap.c \
 	./ft_isblank.c \
 	./ft_iswhitespace.c \
-      ./ft_strndup.c 
+      ./ft_strndup.c \
+	  ./ft_signbit.c
 
 INCLUDES = ./includes/
 

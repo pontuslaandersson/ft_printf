@@ -6,7 +6,7 @@
 #    By: panderss <panderss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/05 13:50:32 by panderss          #+#    #+#              #
-#    Updated: 2020/08/18 18:58:34 by panderss         ###   ########.fr        #
+#    Updated: 2020/08/19 13:35:25 by panderss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,8 @@ SRC_LIBFT = ./libft/ft_memset.c \
 		./libft/ft_lstmap.c \
 		./libft/ft_isblank.c \
 		./libft/ft_iswhitespace.c \
-		./libft/ft_strndup.c 
+		./libft/ft_strndup.c \
+		./libft/ft_signbit.c
 
 SRC_PRINTF = ft_printf.c \
 		build_output.c \
@@ -196,7 +197,8 @@ OBJ_LIBFT = ft_memset.o \
 		ft_lstmap.o \
 		ft_isblank.o \
 		ft_iswhitespace.o \
-		ft_strndup.o
+		ft_strndup.o \
+		ft_signbit.o
 
 OBJ_PRINTF = ft_printf.o \
 		build_output.o \

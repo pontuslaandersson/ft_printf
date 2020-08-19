@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 15:01:34 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 15:34:38 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:36:42 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,19 @@ typedef	struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_fbitshift
+{
+	unsigned long long 	m;
+	unsigned short		exp;
+}						t_fbitshift;
+
+
+typedef union	u_fsignbit
+{
+	long double			ld;
+	t_fbitshift			shifter;
+}						t_fsignbit;
 
 /*
 ** Part Un - Libc functions
@@ -112,6 +125,7 @@ int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isspace(int c);
 int					ft_isblank(int c);
+int					ft_signbit(long double nb);
 void				ft_reversecase(char *c);
 int					ft_iswhitespace(int c);
 char				*ft_strndup(const char *src, size_t n);

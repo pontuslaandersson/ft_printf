@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/07 13:53:59 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/18 21:03:15 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:30:38 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ size_t			d_conversion(t_table *table)
 	else
 		n = va_arg(table->args, int);
 	str = prepretreat_str(table, n);
-	pretreat_str(table, str, n);
 	build_output(table, str);
+	pretreat_str(table, table->cursor->argument, n);
 	ret = actual_d_conversion(n, table, str);
 	table->cursor->len = ret;
 	free(str);

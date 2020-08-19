@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prep_float.c                                    :+:      :+:    :+:   */
+/*   ft_signbit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/05 13:46:24 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:08:26 by panderss         ###   ########.fr       */
+/*   Created: 2020/08/19 13:32:52 by panderss          #+#    #+#             */
+/*   Updated: 2020/08/19 13:38:02 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-double		ft_prep_float(long double n, t_table *table)
+int			ft_signbit(long double nb)
 {
-	long double		dec;
-	int				i;
+	t_fsignbit			signbit;
 
-	if (n < 0)
-	{
-		n = n * -1.0;
-		table->cursor->f_sign = -1;
-	}
-	dec = 0.5;
-	i = table->cursor->precision;
-	while (i-- > 0)
-		dec = dec / 10;
-	n = n + dec;
-	return (n);
+	signbit.ld = nb;
+	return (int)(signbit.shifter.exp >> 15);
 }
