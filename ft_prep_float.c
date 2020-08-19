@@ -42,13 +42,13 @@ double		ft_prep_float(long double n, t_table *table)
 {
 	long double		dec;
 	int				i;
-	long double		copy;
+	/*long double		copy;
 	double			fpart;
 	long			len;
 
 	while (copy >= 1.0000000)
 		copy--;
-	fpart = n;
+	fpart = n;*/
 	if (n < 0)
 	{
 		n = n * -1.0;

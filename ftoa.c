@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-/*char				*ftoa(double n, long precision)
+char				*ftoa(double n, long precision)
 {
 	char	*res;
 	long	ipart;
@@ -39,9 +39,9 @@
 		longtostr((long)fpart, res + i + 1, precision);
 	}
 	return (res);
-}*/
+}
 
-long double	ft_modf(long double x, long double *integer)
+/*long double	ft_modf(long double x, long double *integer)
 {
 	long double int_part;
 
@@ -126,4 +126,4 @@ char				*ftoa(long double n, int precision)
 	free(fpart);
 	free(ipart);
 	return (ret);
-}
+}*/

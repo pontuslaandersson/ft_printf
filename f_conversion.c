@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static int			ft_signbit(long double nb)
 {
@@ -49,11 +48,11 @@ void				do_f_argument(t_table *table, char *str)
 
 void				handle_sign(t_table *table, char *str, size_t n, int sb)
 {
-	/*if (table->cursor->f_sign == -1 || sb == 1)
+	if (table->cursor->f_sign == -1 || sb == 1)
 	{
 		free(table->cursor->argument);
 		table->cursor->argument = ft_strjoin("-", str);
-	}*/
+	}
 	if (table->cursor->plus == 1 && n > 0 && table->cursor->space == 0)
 	{
 		free(table->cursor->argument);
@@ -74,7 +73,7 @@ size_t				f_double(t_table *table)
 
 	n = va_arg(table->args, double);
 	sb = ft_signbit((long double)(n));
-	//n = ft_prep_float(n, table);
+	n = ft_prep_float(n, table);
 	str = ftoa(n, table->cursor->precision);
 	build_output(table, str);
 	handle_sign(table, str, n, sb);
@@ -92,8 +91,8 @@ size_t				f_long_double(t_table *table)
 
 	n = va_arg(table->args, long double);
 	sb = ft_signbit((long double)(n));
-	//n = ft_prep_float(n, table);
-	str = ftoa(n, table->cursor->precision);
+	n = ft_prep_float(n, table);
+	str = ldtoa(n, table->cursor->precision);
 	build_output(table, str);
 	handle_sign(table, str, n, sb);
 	do_f_argument(table, str);

@@ -17,8 +17,6 @@ static int	utoa_length(unsigned int n)
 	int len;
 
 	len = 0;
-	if (n < 0)
-		len++;
 	if (n == 0)
 		len = 1;
 	while (n)
