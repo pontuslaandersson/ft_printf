@@ -6,7 +6,7 @@
 #    By: panderss <panderss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/05 13:50:32 by panderss          #+#    #+#              #
-#    Updated: 2020/08/19 13:35:25 by panderss         ###   ########.fr        #
+#    Updated: 2020/08/19 13:52:56 by panderss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,7 +119,8 @@ SRC_PRINTF = ft_printf.c \
 		o_conversion.c \
 		d_conversion.c \
 		s_conversion.c \
-		sresolve.c
+		sresolve.c \
+		nul_c_conversion.c
 
 INCLUDES = ./includes/
 
@@ -230,7 +231,8 @@ OBJ_PRINTF = ft_printf.o \
 		o_conversion.o \
 		d_conversion.o \
 		s_conversion.o \
-		sresolve.o
+		sresolve.o \
+		nul_c_conversion.o
 
 all: $(NAME)
 

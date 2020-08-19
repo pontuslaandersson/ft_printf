@@ -6,7 +6,7 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:50:53 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:36:24 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:53:34 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ long int				get_width(t_table *table, const char *format, int i);
 size_t					handle_conversion(t_table *table, int conv);
 int						is_conversion(const char *format, int i);
 size_t					jump_i(const char *str, int start);
+size_t					nul_c_conversion(t_table *table);
 int						resolve(t_table *table, const char *format);
 int						parse_args(t_table *table, const char *format);
 void					ft_strrev(char *str, long len);
