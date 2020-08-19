@@ -6,13 +6,13 @@
 /*   By: panderss <panderss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 13:51:39 by panderss          #+#    #+#             */
-/*   Updated: 2020/08/19 13:52:04 by panderss         ###   ########.fr       */
+/*   Updated: 2020/08/19 13:57:33 by panderss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char			*join_value(char *s1, char *s2, int len1, int len2)
+static char	*join_value(char *s1, char *s2, int len1, int len2)
 {
 	char	*ret;
 	int		i;
@@ -34,7 +34,7 @@ static char			*join_value(char *s1, char *s2, int len1, int len2)
 	return (ret);
 }
 
-static char			*append_suffix_to_nul(char *s1)
+static char	*append_suffix_to_nul(char *s1)
 {
 	char	*ret;
 	int		i;
@@ -65,7 +65,7 @@ static void	do_null_prefix(t_table *table, char *prefix, char *tmp, size_t len)
 	free(prefix);
 }
 
-size_t			nul_c_conversion(t_table *table)
+size_t		nul_c_conversion(t_table *table)
 {
 	char		*prefix;
 	char		*suffix;
