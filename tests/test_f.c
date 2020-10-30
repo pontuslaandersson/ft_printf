@@ -126,17 +126,17 @@ void    test_f(void)
     ft_printf("(ft_20a) ft_printf with f conversion of long double and precision of 3: |%.3Lf|\n", ld);
 
 
-    ft_printf("(ft_21a) ft_printf with 16 decimals (3.11111111111111111111): |%.16f|\n", 3.11111111111111111111);
-    printf("(21a) printf with 16 decimals (3.11111111111111111111): |%.16f|\n", 3.11111111111111111111);
-    ft_printf("(ft_21b) ft_printf with 16 decimals (3.16000): |%.16f|\n", d);
-    printf("(21b) printf with 16 decimals (3.16000): |%.16f|\n", d);
-    ft_printf("(ft_21c) ft_printf with 16 decimals (3.11111111111111111111): |%.16lf|\n", f);
-    printf("(21c) printf with 16 decimals (3.11111111111111111111): |%.16lf|\n", f);
-	ft_printf("(ft_21d) ft_printf with 16 decimals (13.1313): |%.16Lf|\n", ld);
-    printf("(21d) printf with 16 decimals (13.1313): |%.16Lf|\n", ld);
+    //ft_printf("(ft_21a) ft_printf with 16 decimals (3.11111111111111111111): |%.16f|\n", 3.11111111111111111111);
+    //printf("(21a) printf with 16 decimals (3.11111111111111111111): |%.16f|\n", 3.11111111111111111111);
+    //ft_printf("(ft_21b) ft_printf with 16 decimals (3.16000): |%.16f|\n", d);
+    //printf("(21b) printf with 16 decimals (3.16000): |%.16f|\n", d);
+    //ft_printf("(ft_21c) ft_printf with 16 decimals (3.11111111111111111111): |%.16lf|\n", f);
+    //printf("(21c) printf with 16 decimals (3.11111111111111111111): |%.16lf|\n", f);
+	//ft_printf("(ft_21d) ft_printf with 16 decimals (13.1313): |%.16Lf|\n", ld);
+    //printf("(21d) printf with 16 decimals (13.1313): |%.16Lf|\n", ld);
     printf("\n");
-    printf("printf with negative 0 in f conversion: |%f|\n", f);
-    ft_printf("ft_printf with negative 0 in f conversion: |%f|\n", f);
+    //printf("printf with negative 0 in f conversion: |%f|\n", f);
+    //ft_printf("ft_printf with negative 0 in f conversion: |%f|\n", f);
     printf("printf with REGULAR 0 in f conversion: |%f|\n", f);
     ft_printf("ft_printf with REGULAR 0 in f conversion: |%f|\n", f);
     printf("\n");

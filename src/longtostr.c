@@ -18,20 +18,54 @@
 */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-long				longtostr(long nb, char *str, long decimals)
+char				*longtostr(long nb, long decimals, int len)
 {
-	long i;
+	//long i;
 
-	i = 0;
-	while (nb)
+	//i = len;
+	//ft_putnbr(len);
+	//ft_putendl(" <= len sent to longtostr.");
+	//printf("nb = %ld\n", nb);
+	char *tmp;
+	char *str;
+
+	tmp = ft_strnew(len);
+	if (decimals == 0 && nb == 0)
 	{
-		str[i++] = (nb % 10) + '0';
+		tmp[0] = '0';
+		len--;
+	}
+	while (nb && len >= 0)
+	{
+		//ft_putendl("Doing longtostr loop.");
+		tmp[len-- - 1] = (nb % 10) + '0';
+		//write(1, &tmp[len], 1);
+		//ft_putendl(" <= character put into string.");
+		//ft_printf("%ld", (nb % 10) + '0');
+		//ft_putendl(" <= number of character put into string.");
+		//ft_putnbr(len);
+		//ft_putendl(" <= inserting at this position");
+		//ft_putchar((nb % 10) + '0');
+		//ft_putendl("<= character for digit.");
 		nb = nb / 10;
 	}
-	while (i < decimals)
-		str[i++] = '0';
-	str[i] = '\0';
-	ft_strrev(str, i);
-	return (i);
+	if (len != 0)
+	{
+		while (len >= 0)
+		{
+			tmp[len-- - 1] = '0';
+			//ft_putendl("Placed a zero.");
+		}
+	}
+	//while (i < decimals)
+		//str[i++] = '0';
+	//str[i] = '\0';
+	//ft_strrev(str, i);
+	str = ft_strdup(tmp);
+	//ft_strdel(&tmp);
+	//ft_putstr("str: ");
+	//ft_putendl(str);
+	return (str);
 }

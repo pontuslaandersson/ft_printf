@@ -87,7 +87,8 @@ int						sresolve(t_table *table, char *buf, \
 							const char *format, size_t size);
 int						ft_snprintf(char *str, size_t n, \
 							const char *format, ...);
-long					longtostr(long nb, char *str, long decimals);
+char					*longtostr(long nb, long decimals, int len);
+long double				ft_modf(long double x, long double *integer);
 size_t					d_conversion(t_table *table);
 size_t					o_conversion(t_table *table);
 size_t					p_conversion(t_table *table);

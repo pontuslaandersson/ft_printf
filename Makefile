@@ -103,6 +103,7 @@ SRC_PRINTF = ./src/ft_printf.c \
 		./src/is_conversion.c \
 		./src/parse_args.c \
 		./src/resolve.c \
+		./src/ft_modf.c \
 		./src/jump_i.c \
 		./src/get_width.c \
 		./src/ft_pow.c \
@@ -221,6 +222,7 @@ OBJ_PRINTF = ft_printf.o \
 		jump_i.o \
 		get_width.o \
 		ft_pow.o \
+		ft_modf.o \
 		itoa_length.o \
 		ft_strrev.o \
 		longtostr.o \
@@ -241,8 +243,8 @@ OBJ_PRINTF = ft_printf.o \
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRC_LIBFT) -I includes/
-	gcc -c -Wall -Wextra -Werror $(SRC_PRINTF) -I includes/
+	gcc -c $(SRC_LIBFT) -I includes/
+	gcc -c $(SRC_PRINTF) -I includes/
 	ar rc $(NAME) $(OBJ_LIBFT) $(OBJ_PRINTF)
 	ranlib $(NAME)
 

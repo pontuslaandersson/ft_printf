@@ -12,14 +12,14 @@
 
 #include "ft_printf.h"
 
-static long double	ft_modf(long double x, long double *integer)
+/*static long double	ft_modf(long double x, long double *integer)
 {
 	long double int_part;
 
 	int_part = (long double)(long int)x;
 	*integer = int_part;
 	return (x - int_part);
-}
+}*/
 
 static long double	rounding(long double nb, int precision)
 {

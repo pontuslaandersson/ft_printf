@@ -70,7 +70,9 @@ size_t				f_double(t_table *table)
 	build_output(table, str);
 	handle_sign(table, str, n, sb);
 	do_f_argument(table);
+	//ft_putendl("Preparing to free string.");
 	free(str);
+	//ft_putendl("String freed.");
 	table->cursor->len = ft_strlen(table->cursor->argument);
 	return (ft_strlen(table->cursor->argument));
 }
@@ -84,11 +86,13 @@ size_t				f_long_double(t_table *table)
 	n = va_arg(table->args, long double);
 	sb = ft_signbit((long double)(n));
 	n = ft_prep_float(n, table);
-	str = ldtoa(n, table->cursor->precision);
+	str = ftoa(n, table->cursor->precision);
 	build_output(table, str);
 	handle_sign(table, str, n, sb);
 	do_f_argument(table);
+	//ft_putendl("Preparing to free string.");
 	free(str);
+	//ft_putendl("String freed.");
 	table->cursor->len = ft_strlen(table->cursor->argument);
 	return (ft_strlen(table->cursor->argument));
 }
