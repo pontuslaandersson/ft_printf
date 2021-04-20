@@ -1,5 +1,5 @@
 # ft_printf
 
-<h1> Project to recreate printf. </h1>
+<h1> Project to recreate libc's printf. </h1>
 
-<p> More here soon... </p>
+<p> Includes the conversions diouxXfF, as well as an implementation of snprintf. Made for the Hive Helsinki curriuculum.</p>
